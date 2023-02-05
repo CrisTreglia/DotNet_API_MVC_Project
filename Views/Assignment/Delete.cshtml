@@ -1,0 +1,43 @@
+@model DotNet_API_MVC.Models.Assignment
+
+@{
+    ViewData["Title"] = "Delete Assignment";
+}
+
+<h1>Do you want to delete this assignment? This action can not be undone.</h1>
+
+<hr/>
+
+<div>
+    <div class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Title)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Title)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Description)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Description)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Date)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Date)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Status)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Status)
+        </dt>
+    </div>
+</div>
+<form asp-action="Delete">
+    <input type="submit" value="Delete" class="btn btn-danger"/>
+</form>
+<br>
+<a asp-action="Index">Back</a>

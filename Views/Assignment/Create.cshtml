@@ -1,0 +1,44 @@
+@model DotNet_API_MVC.Models.Assignment
+
+@{
+    ViewData["Title"] = "Create new assignment";
+}
+
+<h1>Create new assignment</h1>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                @Html.DropDownListFor(m => m.Status, 
+                new SelectList(Enum.GetValues(typeof(EnumStatusAssignment))), 
+                "Select Status")
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+</hr>
+<br>
+<div>
+    <a asp-action="Index">Back</a>
+</div>

@@ -1,0 +1,40 @@
+@model DotNet_API_MVC.Models.Assignment
+
+@{
+    ViewData["Title"] = "Assignment Details";
+}
+
+<h1>Details</h1>
+
+<hr/>
+
+<div>
+    <div class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Title)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Title)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Description)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Description)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Date)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Date)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Status)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Status)
+        </dt>
+    </div>
+</div>
+<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+<a asp-action="Index">Back</a>
